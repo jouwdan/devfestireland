@@ -22,7 +22,7 @@ const About: FC<AboutProps> = ({ data }) => {
             community. Whether it be through hands-on learning experiences,
             technical talks delivered in local languages by experts, or by
             simply meeting fellow local developers, DevFest attendees learn how
-            to build together and innovate on Google's developer tools.
+            to build together and innovate on Google&apos;s developer tools.
           </Text>
         </Box>
       </SimpleGrid>
