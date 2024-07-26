@@ -2,7 +2,6 @@
 import { FC } from "react";
 
 import { Avatar, Box, Container, SimpleGrid, Text } from "@chakra-ui/react";
-import { text } from "stream/consumers";
 
 interface HostsProps {
   data?: any;
@@ -40,9 +39,20 @@ const Hosts: FC<HostsProps> = ({ data }) => {
 
 const styles = {
   heading: {
-    fontSize: { base: "3xl", lg: "4xl", "2xl": "5xl" },
-    fontWeight: "700",
+    mx: "auto",
+    width: "fit-content",
     textAlign: "center",
+    background: "green.pastel",
+    fontSize: { base: "2xl", sm: "3xl", lg: "4xl" },
+    fontWeight: "700",
+    px: { base: "20px", lg: "40px" },
+    border: "4px solid black",
+    borderRadius: "9999px",
+    _dark: {
+      background: "green.core",
+      color: "white",
+      border: "4px solid white",
+    },
   },
   hostContainer: {
     minHeight: "20vh",
