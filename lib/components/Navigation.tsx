@@ -137,7 +137,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
                           onClick={onClose}
                           size="md"
                           mb="8px"
-                          isActive={link.url === pathname}>
+                          isActive={pathname.startsWith(link.url)}>
                           {link.name}
                         </Button>
                       </Link>
