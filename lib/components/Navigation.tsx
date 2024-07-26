@@ -1,9 +1,18 @@
 "use client";
 import { FC } from "react";
 
-import { Box, Button, Container, Text, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Icon,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 
-import { Image } from "@chakra-ui/next-js";
+import { MoonIcon } from "@chakra-ui/icons";
+import Link from "next/link";
+import Logo from "../assets/Logo";
 
 interface NavigationProps {
   data?: any;
@@ -14,20 +23,20 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
   return (
     <Container maxW="85%">
       <Box sx={styles.navigation}>
-        <Box display="flex" gap="2" alignItems="center">
-          <Image
-            src="/devfest-logo.svg"
-            alt="DevFest Ireland"
-            width={35}
-            height={35}
-          />
-          <Text fontSize="2xl" fontWeight="700">
-            DevFest
-          </Text>
-          <Text sx={styles.locationText}>Ireland</Text>
-        </Box>
+        <Link href="/">
+          <Box display="flex" gap="2" alignItems="center">
+            <Icon as={Logo} w="35px" h="35px" />
+            <Text
+              fontSize="2xl"
+              fontWeight="700"
+              display={{ base: "none", lg: "block" }}>
+              DevFest
+            </Text>
+            <Text sx={styles.locationText}>Ireland</Text>
+          </Box>
+        </Link>
         <Button onClick={toggleColorMode}>
-          Toggle {colorMode === "light" ? "Dark" : "Light"}
+          <MoonIcon />
         </Button>
       </Box>
     </Container>
@@ -43,6 +52,7 @@ const styles = {
     height: "70px",
   },
   locationText: {
+    display: { base: "none", lg: "block" },
     background: "white",
     fontSize: "2xl",
     fontWeight: "700",
