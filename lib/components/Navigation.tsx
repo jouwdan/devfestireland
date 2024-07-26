@@ -21,29 +21,41 @@ interface NavigationProps {
 const Navigation: FC<NavigationProps> = ({ data }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Container maxW="85%">
-      <Box sx={styles.navigation}>
-        <Link href="/">
-          <Box display="flex" gap="2" alignItems="center">
-            <Icon as={Logo} w="35px" h="35px" />
-            <Text
-              fontSize="2xl"
-              fontWeight="700"
-              display={{ base: "none", lg: "block" }}>
-              DevFest
-            </Text>
-            <Text sx={styles.locationText}>Ireland</Text>
-          </Box>
-        </Link>
-        <Button onClick={toggleColorMode}>
-          <MoonIcon />
-        </Button>
-      </Box>
-    </Container>
+    <Box sx={styles.navigationContainer}>
+      <Container maxW="1920px">
+        <Box sx={styles.navigation}>
+          <Link href="/">
+            <Box display="flex" gap="2" alignItems="center">
+              <Icon as={Logo} w="35px" h="35px" />
+              <Text
+                fontSize="2xl"
+                fontWeight="700"
+                display={{ base: "none", lg: "block" }}>
+                DevFest
+              </Text>
+              <Text sx={styles.locationText}>Ireland</Text>
+            </Box>
+          </Link>
+          <Button onClick={toggleColorMode}>
+            <MoonIcon />
+          </Button>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
 const styles = {
+  navigationContainer: {
+    position: "sticky",
+    top: "0",
+    bg: "grayscale.whiteclear",
+    backdropFilter: "auto",
+    backdropBlur: "8px",
+    _dark: {
+      bg: "grayscale.blackclear",
+    },
+  },
   navigation: {
     display: "flex",
     flexDirection: "row",

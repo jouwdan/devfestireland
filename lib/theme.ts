@@ -23,7 +23,9 @@ const googleColors = {
   },
   grayscale: {
     white: "#f0f0f0",
+    whiteclear: "rgba(240, 240, 240, 0.8)",
     black: "#1e1e1e",
+    blackclear: "rgba(30, 30, 30, 0.8)",
   },
 };
 

@@ -16,8 +16,8 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ data }) => {
   return (
-    <Box my="5vh">
-      <Container maxW="1920px">
+    <Box my={{ base: "2vh", lg: "5vh" }}>
+      <Container maxW="1600px">
         <Wrap
           spacing={{ base: "10px", sm: "20px", lg: "30px", "2xl": "40px" }}
           justify="center"
@@ -66,15 +66,15 @@ const styles = {
   },
   comment: {
     w: { base: "70px", lg: "150px", "2xl": "200px" },
-    h: { base: "100px", lg: "250px", "2xl": "350px" },
+    h: { base: "100px", lg: "250px", "2xl": "300px" },
   },
   logo: {
     w: { base: "120px", lg: "200px", "2xl": "250px" },
     h: { base: "100px", lg: "170px", "2xl": "200px" },
   },
   lineIcon: {
-    w: { base: "50px", lg: "150px" },
-    h: { base: "50px", lg: "150px" },
+    w: { base: "70px", lg: "130px" },
+    h: { base: "70px", lg: "130px" },
     px: { base: "10px", lg: "20px" },
   },
   devfestText: {
