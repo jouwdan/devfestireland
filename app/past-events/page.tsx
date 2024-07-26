@@ -5,11 +5,11 @@ import { Container, Text } from "@chakra-ui/react";
 export default function PastEvents() {
   return (
     <Container maxW="1920px" px="20px" py="5vh">
-      <Text sx={styles.heading}>DevFest 2023</Text>
+      <Text sx={styles.heading}>DevFest Ireland 2023 - Dublin</Text>
       <Text fontSize="2xl" my="20px">
         More info coming soon!
       </Text>
-      <Text sx={styles.heading}>DevFest 2022</Text>
+      <Text sx={styles.heading}>DevFest Ireland 2022 - Galway</Text>
       <Text fontSize="2xl" mt="20px">
         More info coming soon!
       </Text>
