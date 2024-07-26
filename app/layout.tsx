@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import { Box, ColorModeScript, SystemStyleObject } from "@chakra-ui/react";
 import theme from "@/lib/theme";
 import { Navigation } from "@/lib/components/Navigation";
+import { Footer } from "@/lib/components/Footer";
 
 const googleSans = localFont({
   src: [
@@ -38,6 +39,7 @@ export default function RootLayout({
           <Box sx={styles.layout} minH="100vh" w="full">
             <Navigation />
             {children}
+            <Footer />
           </Box>
         </Providers>
       </body>
