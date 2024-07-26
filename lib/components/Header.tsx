@@ -6,6 +6,9 @@ import CurlyBracketOpen from "@/lib/assets/bold/CurlyBracketOpen";
 import CurlyBracketClose from "@/lib/assets/bold/CurlyBracketClose";
 import Logo from "@/lib/assets/Logo";
 import Globe from "@/lib/assets/line/Globe";
+import Heart from "../assets/line/Heart";
+import Hash from "../assets/line/Hash";
+import Comment from "../assets/bold/Comment";
 
 interface HeaderProps {
   data?: any;
@@ -14,9 +17,9 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({ data }) => {
   return (
     <Box my="5vh">
-      <Container maxW="85%" h="60vh">
+      <Container maxW="1920px">
         <Wrap
-          spacing={{ base: "0px", lg: "30px" }}
+          spacing={{ base: "10px", sm: "20px", lg: "30px", "2xl": "40px" }}
           justify="center"
           align="center">
           <Flex sx={styles.flex}>
@@ -36,9 +39,20 @@ const Header: FC<HeaderProps> = ({ data }) => {
             <Icon as={CurlyBracketClose} sx={styles.curlyBracket} />
           </Flex>
           <Box textAlign="center">
-            <Icon as={Globe} sx={styles.globe} />
-            <Text sx={styles.yearText}>2024</Text>
+            <Box textAlign="center">
+              <Icon as={Globe} sx={styles.lineIcon} />
+              <Icon as={Hash} sx={styles.lineIcon} />
+              <Icon as={Heart} sx={styles.lineIcon} />
+            </Box>
+            <Text sx={styles.dateText}>16th Nov 2024</Text>
           </Box>
+          <Flex sx={styles.flex}>
+            <Icon as={Comment} sx={styles.comment} />
+            <Box>
+              <Text sx={styles.universityText}>Ulster University</Text>
+              <Text sx={styles.devfestText}>Belfast</Text>
+            </Box>
+          </Flex>
         </Wrap>
       </Container>
     </Box>
@@ -47,29 +61,34 @@ const Header: FC<HeaderProps> = ({ data }) => {
 
 const styles = {
   curlyBracket: {
-    w: { base: "40px", lg: "80px", "2xl": "100px" },
-    h: { base: "100px", lg: "300px", "2xl": "350px" },
+    w: { base: "40px", lg: "75px", "2xl": "100px" },
+    h: { base: "110px", lg: "250px", "2xl": "350px" },
+  },
+  comment: {
+    w: { base: "70px", lg: "150px", "2xl": "200px" },
+    h: { base: "100px", lg: "250px", "2xl": "350px" },
   },
   logo: {
     w: { base: "120px", lg: "200px", "2xl": "250px" },
     h: { base: "100px", lg: "170px", "2xl": "200px" },
   },
-  globe: {
+  lineIcon: {
     w: { base: "50px", lg: "150px" },
     h: { base: "50px", lg: "150px" },
+    px: { base: "10px", lg: "20px" },
   },
   devfestText: {
     textAlign: "center",
-    fontSize: { base: "4xl", lg: "8xl" },
+    fontSize: { base: "4xl", lg: "6xl", "2xl": "7xl" },
     fontWeight: "700",
   },
   locationText: {
     textAlign: "center",
     background: "white",
-    fontSize: { base: "3xl", lg: "7xl" },
+    fontSize: { base: "3xl", sm: "4xl", lg: "5xl", "2xl": "6xl" },
     fontWeight: "700",
+    lineHeight: "1.4",
     px: { base: "20px", lg: "40px" },
-    mb: { base: "12px", lg: "30px" },
     border: "4px solid black",
     borderRadius: "9999px",
     _dark: {
@@ -78,10 +97,10 @@ const styles = {
       border: "4px solid white",
     },
   },
-  yearText: {
+  dateText: {
     textAlign: "center",
     background: "red.pastel",
-    fontSize: { base: "3xl", sm: "4xl", lg: "7xl" },
+    fontSize: { base: "3xl", sm: "4xl", lg: "5xl", "2xl": "6xl" },
     fontWeight: "700",
     px: { base: "20px", lg: "40px" },
     border: "4px solid black",
@@ -92,8 +111,22 @@ const styles = {
       border: "4px solid white",
     },
   },
+  universityText: {
+    textAlign: "center",
+    background: "yellow.pastel",
+    fontSize: { base: "3xl", sm: "4xl", lg: "5xl", "2xl": "6xl" },
+    fontWeight: "700",
+    px: { base: "20px", lg: "40px" },
+    border: "4px solid black",
+    borderRadius: "9999px",
+    _dark: {
+      background: "yellow.core",
+      color: "white",
+      border: "4px solid white",
+    },
+  },
   gdgText: {
-    fontSize: { base: "2xl", lg: "5xl", "2xl": "7xl" },
+    fontSize: { base: "2xl", lg: "5xl", "2xl": "6xl" },
     fontWeight: "700",
     lineHeight: "1",
   },
