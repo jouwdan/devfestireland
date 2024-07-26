@@ -39,6 +39,10 @@ const links = [
     url: "/agenda",
   },
   {
+    name: "Sponsors",
+    url: "/sponsors",
+  },
+  {
     name: "Organizers",
     url: "/organizers",
   },
