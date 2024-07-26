@@ -1,7 +1,9 @@
 "use client";
 
+import { Link } from "@chakra-ui/next-js";
 import {
   Avatar,
+  Box,
   Card,
   CardBody,
   Container,
@@ -16,12 +18,12 @@ const organizerList = [
     image: "/images/jordan-harrison.jpg",
     social: [
       {
-        name: "Twitter",
-        url: "https://twitter.com/jouwdan",
-      },
-      {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/jouwdan/",
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/jouwdan",
       },
     ],
   },
@@ -44,6 +46,18 @@ export default function Organizers() {
                 {organizer.name}
               </Text>
               <Text fontSize="xl">{organizer.chapter}</Text>
+              <Box mt="10px">
+                {organizer.social.map((social, index) => (
+                  <Link
+                    href={social.url}
+                    target="_blank"
+                    key={index}
+                    p="4px"
+                    textDecor="underline">
+                    {social.name}
+                  </Link>
+                ))}
+              </Box>
             </CardBody>
           </Card>
         ))}
