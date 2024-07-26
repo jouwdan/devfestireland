@@ -35,7 +35,7 @@ const styles = {
   headingContainer: {
     minHeight: { base: "20vh", lg: "40vh", "2xl": "30vh" },
     alignContent: "center",
-    px: { base: "10px", lg: "40px", "2xl": "60px" },
+    px: { base: "40px", lg: "40px", "2xl": "60px" },
     bg: "blue.pastel",
     _dark: {
       bg: "blue.core",
@@ -46,7 +46,8 @@ const styles = {
     fontWeight: "700",
   },
   descriptionContainer: {
-    px: { base: "10px", lg: "40px", "2xl": "60px" },
+    px: { base: "40px", lg: "40px", "2xl": "60px" },
+    py: { base: "40px", lg: "40px" },
     bg: "grayscale.white",
     _dark: {
       bg: "grayscale.black",
