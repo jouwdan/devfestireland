@@ -9,7 +9,7 @@ interface AboutProps {
 
 const About: FC<AboutProps> = ({ data }) => {
   return (
-    <Container maxW="1920px" p="0">
+    <Container maxW="1920px" px="0" py="5vh">
       <SimpleGrid columns={{ base: 1, lg: 2 }} alignItems="center">
         <Box sx={styles.headingContainer}>
           <Text sx={styles.heading}>What is DevFest?</Text>

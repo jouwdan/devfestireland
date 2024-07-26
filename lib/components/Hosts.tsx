@@ -9,7 +9,7 @@ interface HostsProps {
 
 const Hosts: FC<HostsProps> = ({ data }) => {
   return (
-    <Container maxW="1920px" px="0" py="50px">
+    <Container maxW="1920px" px="0" py="5vh">
       <Text sx={styles.heading}>Hosted by your local chapters</Text>
       <SimpleGrid columns={{ base: 2, lg: 5 }} alignItems="center">
         <Box sx={styles.hostContainer}>

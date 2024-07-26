@@ -16,7 +16,7 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ data }) => {
   return (
-    <Box my={{ base: "2vh", lg: "5vh" }}>
+    <Box my="5vh">
       <Container maxW="1600px">
         <Wrap
           spacing={{ base: "10px", sm: "20px", lg: "30px", "2xl": "40px" }}
@@ -116,6 +116,7 @@ const styles = {
     background: "yellow.pastel",
     fontSize: { base: "3xl", sm: "4xl", lg: "5xl", "2xl": "6xl" },
     fontWeight: "700",
+    lineHeight: { base: "1.2", lg: "1.4" },
     px: { base: "20px", lg: "40px" },
     border: "4px solid black",
     borderRadius: "9999px",
