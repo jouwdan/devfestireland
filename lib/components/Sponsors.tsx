@@ -61,11 +61,7 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
           <Link href={sponsor.url} key={sponsor.name}>
             <Card sx={styles.sponsorContainer} key={sponsor.name}>
               <CardBody>
-                <Avatar
-                  size={{ base: "lg", lg: "2xl" }}
-                  name={sponsor.name}
-                  src={sponsor.logo}
-                />
+                <Avatar size="lg" name={sponsor.name} src={sponsor.logo} />
               </CardBody>
             </Card>
           </Link>
@@ -80,11 +76,7 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
           <Link href={sponsor.url} key={sponsor.name}>
             <Card sx={styles.sponsorContainer} key={sponsor.name}>
               <CardBody>
-                <Avatar
-                  size={{ base: "lg", lg: "2xl" }}
-                  name={sponsor.name}
-                  src={sponsor.logo}
-                />
+                <Avatar size="lg" name={sponsor.name} src={sponsor.logo} />
               </CardBody>
             </Card>
           </Link>
@@ -116,7 +108,7 @@ const styles = {
     alignContent: "center",
     textAlign: "center",
     px: { base: "40px", lg: "40px", "2xl": "60px" },
-    py: { base: "20px", lg: "40px" },
+    py: "20px",
     m: "20px",
     boxShadow: "none",
     borderRadius: "24px",
