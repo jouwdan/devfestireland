@@ -51,7 +51,7 @@ const t2sponsors = [
 const Sponsors: FC<SponsorsProps> = ({ data }) => {
   return (
     <Container maxW="1920px" px="0" py="5vh">
-      <Text sx={styles.heading}>Meet our Sponsors</Text>
+      <Text sx={styles.heading}>Our Sponsors</Text>
       <Flex
         flexDir={{ base: "column", lg: "row" }}
         justifyContent="center"
