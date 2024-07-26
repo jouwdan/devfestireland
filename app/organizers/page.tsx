@@ -32,8 +32,8 @@ export default function Organizers() {
     <Container maxW="1920px" px="20px" py="5vh">
       <Text sx={styles.heading}>Meet the Organizers</Text>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3, "2xl": 4 }} spacing={10}>
-        {organizerList.map((organizer) => (
-          <Card sx={styles.organizerContainer}>
+        {organizerList.map((organizer, index) => (
+          <Card sx={styles.organizerContainer} key={index}>
             <CardBody>
               <Avatar
                 size={{ base: "lg", lg: "2xl" }}
