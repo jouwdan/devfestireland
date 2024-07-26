@@ -115,14 +115,9 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
                 placement="right"
                 onClose={onClose}
                 finalFocusRef={btnRef}>
-                <DrawerOverlay
-                  zIndex="51"
-                  backdropFilter="auto"
-                  backdropBlur="8px"
-                  bg="grayscale.whiteclear"
-                />
-                <DrawerContent zIndex="52">
-                  <DrawerCloseButton />
+                <DrawerOverlay sx={styles.drawerOverlay} />
+                <DrawerContent zIndex="52" sx={styles.drawerContent}>
+                  <DrawerCloseButton mt="10px" mr="10px" />
                   <DrawerHeader>Menu</DrawerHeader>
 
                   <DrawerBody>
@@ -228,6 +223,23 @@ const styles = {
     },
     _hover: {
       bg: "green.pastel",
+    },
+  },
+  drawerOverlay: {
+    backdropFilter: "auto",
+    backdropBlur: "8px",
+    bg: "grayscale.whiteclear",
+    _dark: {
+      bg: "grayscale.blackclear",
+    },
+  },
+  drawerContent: {
+    display: "flex",
+    p: "10px",
+    flexDirection: "column",
+    bg: "grayscale.white",
+    _dark: {
+      bg: "grayscale.black",
     },
   },
 };
