@@ -13,10 +13,8 @@ import {
   DrawerOverlay,
   Flex,
   Icon,
-  Input,
   Show,
   Text,
-  textDecoration,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -35,6 +33,10 @@ const links = [
   {
     name: "Home",
     url: "/",
+  },
+  {
+    name: "Agenda",
+    url: "/agenda",
   },
   {
     name: "Organizers",
