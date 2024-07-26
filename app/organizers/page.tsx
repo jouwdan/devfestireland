@@ -14,6 +14,7 @@ import {
 const organizerList = [
   {
     name: "Jordan Harrison",
+    role: "Software Developer, Charles River Labs",
     chapter: "GDG Portlaoise",
     image: "/images/jordan-harrison.jpg",
     social: [
@@ -44,6 +45,9 @@ export default function Organizers() {
               />
               <Text fontSize="3xl" mt="20px" fontWeight="700">
                 {organizer.name}
+              </Text>
+              <Text fontSize="xl" my="10px">
+                {organizer.role}
               </Text>
               <Text fontSize="xl">{organizer.chapter}</Text>
               <Box mt="10px">
