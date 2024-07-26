@@ -1,19 +1,28 @@
 "use client";
-import { FC } from "react";
+import { FC, useRef } from "react";
 
 import {
   Box,
   Button,
   Container,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
   Flex,
   Icon,
+  Input,
   Show,
   Text,
   textDecoration,
   useColorMode,
+  useDisclosure,
 } from "@chakra-ui/react";
 
-import { MoonIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, MoonIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import Logo from "../assets/Logo";
 
@@ -45,6 +54,8 @@ const links = [
 ];
 
 const Navigation: FC<NavigationProps> = ({ data }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef<HTMLButtonElement | null>(null);
   const { colorMode, toggleColorMode } = useColorMode();
   const pathname = usePathname();
   return (
@@ -89,6 +100,57 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
               ml="4">
               <MoonIcon />
             </Button>
+            <Show below="lg">
+              <Button
+                ref={btnRef}
+                onClick={onOpen}
+                variant="unstyled"
+                sx={styles.button}
+                size="md"
+                ml="4">
+                <HamburgerIcon />
+              </Button>
+              <Drawer
+                isOpen={isOpen}
+                placement="right"
+                onClose={onClose}
+                finalFocusRef={btnRef}>
+                <DrawerOverlay
+                  zIndex="51"
+                  backdropFilter="auto"
+                  backdropBlur="8px"
+                  bg="grayscale.whiteclear"
+                />
+                <DrawerContent zIndex="52">
+                  <DrawerCloseButton />
+                  <DrawerHeader>Menu</DrawerHeader>
+
+                  <DrawerBody>
+                    {links.map((link) => (
+                      <Link
+                        href={link.url}
+                        key={link.name}
+                        target={link.newTab ? "_blank" : ""}>
+                        <Button
+                          w="full"
+                          variant="unstyled"
+                          sx={
+                            link.featured
+                              ? styles.featuredButton
+                              : styles.button
+                          }
+                          onClick={onClose}
+                          size="md"
+                          mb="8px"
+                          isActive={link.url === pathname}>
+                          {link.name}
+                        </Button>
+                      </Link>
+                    ))}
+                  </DrawerBody>
+                </DrawerContent>
+              </Drawer>
+            </Show>
           </Flex>
         </Box>
       </Container>
@@ -103,7 +165,7 @@ const styles = {
     bg: "grayscale.whiteclear",
     backdropFilter: "auto",
     backdropBlur: "8px",
-    zIndex: "9999",
+    zIndex: "50",
     _dark: {
       bg: "grayscale.blackclear",
     },
