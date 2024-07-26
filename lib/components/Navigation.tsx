@@ -51,6 +51,10 @@ const links = [
     url: "/blog",
   },
   {
+    name: "Past Events",
+    url: "/past-events",
+  },
+  {
     name: "Get Your Ticket",
     url: "https://gdg.community.dev/events/details/google-gdg-belfast-presents-devfest-ireland-2024",
     newTab: true,
