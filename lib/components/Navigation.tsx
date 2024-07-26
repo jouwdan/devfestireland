@@ -52,6 +52,7 @@ const styles = {
     bg: "grayscale.whiteclear",
     backdropFilter: "auto",
     backdropBlur: "8px",
+    zIndex: "9999",
     _dark: {
       bg: "grayscale.blackclear",
     },
