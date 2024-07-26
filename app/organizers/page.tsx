@@ -34,7 +34,10 @@ export default function Organizers() {
   return (
     <Container maxW="1920px" px="20px" py="5vh">
       <Text sx={styles.heading}>Meet the Organizers</Text>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3, "2xl": 4 }} spacing={10}>
+      <SimpleGrid
+        columns={{ base: 1, md: 2, lg: 3, "2xl": 4 }}
+        spacing={10}
+        my="20px">
         {organizerList.map((organizer, index) => (
           <Card sx={styles.organizerContainer} key={index}>
             <CardBody>
@@ -91,7 +94,6 @@ const styles = {
     textAlign: "center",
     px: { base: "40px", lg: "40px", "2xl": "60px" },
     py: { base: "20px", lg: "40px" },
-    m: "20px",
     boxShadow: "none",
     borderRadius: "24px",
     border: "4px solid black",
