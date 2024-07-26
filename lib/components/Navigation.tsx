@@ -20,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 
 import { HamburgerIcon, MoonIcon } from "@chakra-ui/icons";
-import Link from "next/link";
+import { Link } from "@chakra-ui/next-js";
 import Logo from "../assets/Logo";
 
 import { usePathname } from "next/navigation";
@@ -60,101 +60,120 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const pathname = usePathname();
   return (
-    <Box sx={styles.navigationContainer}>
-      <Container maxW="1920px">
-        <Box sx={styles.navigation}>
-          <Link href="/">
-            <Box display="flex" gap="2" alignItems="center">
-              <Icon as={Logo} w="35px" h="35px" />
-              <Text
-                fontSize="2xl"
-                fontWeight="700"
-                display={{ base: "none", lg: "block" }}>
-                DevFest
-              </Text>
-              <Text sx={styles.locationText}>Ireland</Text>
-            </Box>
+    <>
+      <Box sx={styles.actionBar}>
+        <Text textAlign="center" py="2">
+          Our Call for Speakers is now open.{" "}
+          <Link
+            href="https://sessionize.com/devfest-ireland-2024/"
+            target="_blank"
+            textDecoration="underline">
+            Click here to submit your talk!
           </Link>
-          <Flex>
-            <Show above="lg">
-              {links.map((link) => (
-                <Link
-                  href={link.url}
-                  key={link.name}
-                  target={link.newTab ? "_blank" : ""}>
-                  <Button
-                    variant="unstyled"
-                    sx={link.featured ? styles.featuredButton : styles.button}
-                    size="md"
-                    ml="4"
-                    isActive={link.url === pathname}>
-                    {link.name}
-                  </Button>
-                </Link>
-              ))}
-            </Show>
-            <Button
-              variant="unstyled"
-              sx={styles.button}
-              onClick={toggleColorMode}
-              size="md"
-              ml="4">
-              <MoonIcon />
-            </Button>
-            <Show below="lg">
+        </Text>
+      </Box>
+      <Box sx={styles.navigationContainer}>
+        <Container maxW="1920px">
+          <Box sx={styles.navigation}>
+            <Link href="/">
+              <Box display="flex" gap="2" alignItems="center">
+                <Icon as={Logo} w="35px" h="35px" />
+                <Text
+                  fontSize="2xl"
+                  fontWeight="700"
+                  display={{ base: "none", lg: "block" }}>
+                  DevFest
+                </Text>
+                <Text sx={styles.locationText}>Ireland</Text>
+              </Box>
+            </Link>
+            <Flex>
+              <Show above="lg">
+                {links.map((link) => (
+                  <Link
+                    href={link.url}
+                    key={link.name}
+                    target={link.newTab ? "_blank" : ""}>
+                    <Button
+                      variant="unstyled"
+                      sx={link.featured ? styles.featuredButton : styles.button}
+                      size="md"
+                      ml="4"
+                      isActive={link.url === pathname}>
+                      {link.name}
+                    </Button>
+                  </Link>
+                ))}
+              </Show>
               <Button
-                ref={btnRef}
-                onClick={onOpen}
                 variant="unstyled"
                 sx={styles.button}
+                onClick={toggleColorMode}
                 size="md"
                 ml="4">
-                <HamburgerIcon />
+                <MoonIcon />
               </Button>
-              <Drawer
-                isOpen={isOpen}
-                placement="right"
-                onClose={onClose}
-                finalFocusRef={btnRef}>
-                <DrawerOverlay sx={styles.drawerOverlay} />
-                <DrawerContent zIndex="52" sx={styles.drawerContent}>
-                  <DrawerCloseButton mt="10px" mr="10px" />
-                  <DrawerHeader>Menu</DrawerHeader>
+              <Show below="lg">
+                <Button
+                  ref={btnRef}
+                  onClick={onOpen}
+                  variant="unstyled"
+                  sx={styles.button}
+                  size="md"
+                  ml="4">
+                  <HamburgerIcon />
+                </Button>
+                <Drawer
+                  isOpen={isOpen}
+                  placement="right"
+                  onClose={onClose}
+                  finalFocusRef={btnRef}>
+                  <DrawerOverlay sx={styles.drawerOverlay} />
+                  <DrawerContent zIndex="52" sx={styles.drawerContent}>
+                    <DrawerCloseButton mt="10px" mr="10px" />
+                    <DrawerHeader>Menu</DrawerHeader>
 
-                  <DrawerBody>
-                    {links.map((link) => (
-                      <Link
-                        href={link.url}
-                        key={link.name}
-                        target={link.newTab ? "_blank" : ""}>
-                        <Button
-                          w="full"
-                          variant="unstyled"
-                          sx={
-                            link.featured
-                              ? styles.featuredButton
-                              : styles.button
-                          }
-                          onClick={onClose}
-                          size="md"
-                          mb="8px"
-                          isActive={pathname.startsWith(link.url)}>
-                          {link.name}
-                        </Button>
-                      </Link>
-                    ))}
-                  </DrawerBody>
-                </DrawerContent>
-              </Drawer>
-            </Show>
-          </Flex>
-        </Box>
-      </Container>
-    </Box>
+                    <DrawerBody>
+                      {links.map((link) => (
+                        <Link
+                          href={link.url}
+                          key={link.name}
+                          target={link.newTab ? "_blank" : ""}>
+                          <Button
+                            w="full"
+                            variant="unstyled"
+                            sx={
+                              link.featured
+                                ? styles.featuredButton
+                                : styles.button
+                            }
+                            onClick={onClose}
+                            size="md"
+                            mb="8px"
+                            isActive={pathname.startsWith(link.url)}>
+                            {link.name}
+                          </Button>
+                        </Link>
+                      ))}
+                    </DrawerBody>
+                  </DrawerContent>
+                </Drawer>
+              </Show>
+            </Flex>
+          </Box>
+        </Container>
+      </Box>
+    </>
   );
 };
 
 const styles = {
+  actionBar: {
+    bg: "yellow.pastel",
+    _dark: {
+      bg: "yellow.core",
+    },
+  },
   navigationContainer: {
     position: "sticky",
     top: "0",
