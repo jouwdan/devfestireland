@@ -24,7 +24,7 @@ const Welcome: FC<WelcomeProps> = ({ data }) => {
             Belfast, promises to be an extraordinary celebration of technology,
             innovation, and community. Whether you&apos;re a seasoned developer,
             a tech enthusiast, or someone just starting out in the tech
-            industry, DevFest Ireland 2024 has something for you. It's an
+            industry, DevFest Ireland 2024 has something for you. It&apos;s an
             opportunity to learn, grow, and be part of something bigger.
             <br /> <br />
             We can&apos;t wait to see you there. Together, let&apos;s make
