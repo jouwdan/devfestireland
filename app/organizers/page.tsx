@@ -13,6 +13,18 @@ import {
 
 const organizerList = [
   {
+    name: "Rachel Connor",
+    role: "Senior Consultant, Deloitte",
+    chapter: "GDG Belfast",
+    image: "/images/rachel-connor.png",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/rachel-connor",
+      },
+    ],
+  },
+  {
     name: "Jordan Harrison",
     role: "Software Developer, Charles River Labs",
     chapter: "GDG Portlaoise",
