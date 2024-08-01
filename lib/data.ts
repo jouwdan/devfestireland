@@ -41,6 +41,18 @@ export const organizers = [
     ],
   },
   {
+    name: "Federico Haustein",
+    role: "Backend Developer",
+    chapter: "GDG Galway",
+    image: "/images/federico-haustein.jpg",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/fedehaust",
+      },
+    ],
+  },
+  {
     name: "Jordan Harrison",
     role: "Software Developer, Charles River Labs",
     chapter: "GDG Portlaoise",
