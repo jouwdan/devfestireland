@@ -47,10 +47,6 @@ const links = [
     url: "/organizers",
   },
   {
-    name: "Blog",
-    url: "/blog",
-  },
-  {
     name: "Past Events",
     url: "/past-events",
   },
