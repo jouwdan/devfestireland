@@ -10,37 +10,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-
-const organizerList = [
-  {
-    name: "Rachel Connor",
-    role: "Senior Consultant, Deloitte",
-    chapter: "GDG Belfast",
-    image: "/images/rachel-connor.png",
-    social: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/rachel-connor",
-      },
-    ],
-  },
-  {
-    name: "Jordan Harrison",
-    role: "Software Developer, Charles River Labs",
-    chapter: "GDG Portlaoise",
-    image: "/images/jordan-harrison.jpg",
-    social: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/jouwdan/",
-      },
-      {
-        name: "GitHub",
-        url: "https://github.com/jouwdan",
-      },
-    ],
-  },
-];
+import { organizers } from "@/lib/data";
 
 export default function Organizers() {
   return (
@@ -50,7 +20,7 @@ export default function Organizers() {
         columns={{ base: 1, md: 2, lg: 3, "2xl": 4 }}
         spacing={10}
         my="20px">
-        {organizerList.map((organizer, index) => (
+        {organizers.map((organizer, index) => (
           <Card sx={styles.organizerContainer} key={index}>
             <CardBody>
               <Avatar

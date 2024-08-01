@@ -22,41 +22,13 @@ import {
 import { HamburgerIcon, MoonIcon } from "@chakra-ui/icons";
 import { Link } from "@chakra-ui/next-js";
 import Logo from "../assets/Logo";
+import { navLinks } from "@/lib/data";
 
 import { usePathname } from "next/navigation";
 
 interface NavigationProps {
   data?: any;
 }
-
-const links = [
-  {
-    name: "Home",
-    url: "/",
-  },
-  {
-    name: "Agenda",
-    url: "/agenda",
-  },
-  {
-    name: "Sponsors",
-    url: "/sponsors",
-  },
-  {
-    name: "Organizers",
-    url: "/organizers",
-  },
-  {
-    name: "Past Events",
-    url: "/past-events",
-  },
-  {
-    name: "Get Your Ticket",
-    url: "https://gdg.community.dev/events/details/google-gdg-belfast-presents-devfest-ireland-2024",
-    newTab: true,
-    featured: true,
-  },
-];
 
 const Navigation: FC<NavigationProps> = ({ data }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -93,7 +65,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
             </Link>
             <Flex>
               <Show above="lg">
-                {links.map((link) => (
+                {navLinks.map((link) => (
                   <Link
                     href={link.url}
                     key={link.name}
@@ -138,7 +110,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
                     <DrawerHeader>Menu</DrawerHeader>
 
                     <DrawerBody>
-                      {links.map((link) => (
+                      {navLinks.map((link) => (
                         <Link
                           href={link.url}
                           key={link.name}
