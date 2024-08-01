@@ -56,6 +56,18 @@ export const organizers = [
       },
     ],
   },
+  {
+    name: "Mariana Alves",
+    role: "Desktop Support Engineer, EirEvo",
+    chapter: "GDG Portlaoise",
+    image: "/images/mariana-alves.jpg",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/mariana-alves-adba",
+      },
+    ],
+  },
 ];
 
 export const pastEvents = [
