@@ -11,14 +11,10 @@ const Hosts: FC<HostsProps> = ({ data }) => {
   return (
     <Container maxW="1920px" px="0" py="5vh">
       <Text sx={styles.heading}>Hosted by your local chapters</Text>
-      <SimpleGrid columns={{ base: 2, lg: 5 }} alignItems="center">
+      <SimpleGrid columns={{ base: 2, lg: 4 }} alignItems="center">
         <Box sx={styles.hostContainer}>
           <Avatar size="2xl" name="Belfast" />
           <Text sx={styles.hostName}>GDG Belfast</Text>
-        </Box>
-        <Box sx={styles.hostContainer}>
-          <Avatar size="2xl" name="Dublin" />
-          <Text sx={styles.hostName}>GDG Dublin</Text>
         </Box>
         <Box sx={styles.hostContainer}>
           <Avatar size="2xl" name="Galway" />
