@@ -1,52 +1,29 @@
 "use client";
 import { FC } from "react";
 
-import {
-  Avatar,
-  Box,
-  Card,
-  CardBody,
-  Container,
-  Flex,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
+import { Card, CardBody, Container, Flex, Image, Text } from "@chakra-ui/react";
+
 import { Link } from "@chakra-ui/next-js";
 
 interface SponsorsProps {
   data?: any;
 }
 
-const t1sponsors = [
+interface Sponsor {
+  name: string;
+  url: string;
+  logo: string;
+}
+
+const t1sponsors: Sponsor[] = [
   {
-    name: "TBC",
-    url: "#",
-    logo: "https://www.example.com/logo.png",
-  },
-  {
-    name: "TBC",
-    url: "#",
-    logo: "https://www.example.com/logo.png",
+    name: "Google Developers",
+    url: "https://developers.google.com/",
+    logo: "/images/sponsors/google_developers.png",
   },
 ];
 
-const t2sponsors = [
-  {
-    name: "TBC",
-    url: "#",
-    logo: "https://www.example.com/logo.png",
-  },
-  {
-    name: "TBC",
-    url: "#",
-    logo: "https://www.example.com/logo.png",
-  },
-  {
-    name: "TBC",
-    url: "#",
-    logo: "https://www.example.com/logo.png",
-  },
-];
+const t2sponsors: Sponsor[] = [];
 
 const Sponsors: FC<SponsorsProps> = ({ data }) => {
   return (
@@ -58,10 +35,10 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
         w={{ base: "100vw", lg: "50vw" }}
         mx="auto">
         {t1sponsors.map((sponsor) => (
-          <Link href={sponsor.url} key={sponsor.name}>
+          <Link href={sponsor.url} key={sponsor.name} target="_blank">
             <Card sx={styles.sponsorContainer} key={sponsor.name}>
               <CardBody>
-                <Avatar size="lg" name={sponsor.name} src={sponsor.logo} />
+                <Image alt={sponsor.name} src={sponsor.logo} maxWidth="250px" />
               </CardBody>
             </Card>
           </Link>
@@ -72,15 +49,16 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
         justifyContent="center"
         w={{ base: "100vw", lg: "75vw" }}
         mx="auto">
-        {t2sponsors.map((sponsor) => (
-          <Link href={sponsor.url} key={sponsor.name}>
-            <Card sx={styles.sponsorContainer} key={sponsor.name}>
-              <CardBody>
-                <Avatar size="lg" name={sponsor.name} src={sponsor.logo} />
-              </CardBody>
-            </Card>
-          </Link>
-        ))}
+        {t2sponsors.length > 0 &&
+          t2sponsors.map((sponsor) => (
+            <Link href={sponsor.url} key={sponsor.name} target="_blank">
+              <Card sx={styles.sponsorContainer} key={sponsor.name}>
+                <CardBody>
+                  <Image alt={sponsor.name} src={sponsor.logo} />
+                </CardBody>
+              </Card>
+            </Link>
+          ))}
       </Flex>
     </Container>
   );
