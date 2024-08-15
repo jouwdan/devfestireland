@@ -104,6 +104,18 @@ export const organizers = [
       },
     ],
   },
+  {
+    name: "Imogen Greene",
+    role: "Student",
+    chapter: "GDSC UU",
+    image: "/images/imogen-greene.jped",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/imogen-greene/",
+      },
+    ],
+  },
 ];
 
 export const pastEvents = [
