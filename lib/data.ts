@@ -80,6 +80,18 @@ export const organizers = [
       },
     ],
   },
+  {
+    name: "Carolina Cobo",
+    role: "Frontend Engineer",
+    chapter: "GDG Dublin",
+    image: "/images/carolina-cobo.png",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/carolina-cobo/",
+      },
+    ],
+  },
 ];
 
 export const pastEvents = [
