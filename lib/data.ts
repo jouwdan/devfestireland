@@ -108,7 +108,7 @@ export const organizers = [
     name: "Imogen Greene",
     role: "Student",
     chapter: "GDSC UU",
-    image: "/images/imogen-greene.jped",
+    image: "/images/imogen-greene.jpeg",
     social: [
       {
         name: "LinkedIn",
