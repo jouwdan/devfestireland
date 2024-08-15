@@ -92,6 +92,18 @@ export const organizers = [
       },
     ],
   },
+  {
+    name: "Aldan Creo",
+    role: "Technology Research Specialist",
+    chapter: "GDG Dublin",
+    image: "/images/aldan-creo.jpg",
+    social: [
+      {
+        name: "Website",
+        url: "https://acmc-website.web.app",
+      },
+    ],
+  },
 ];
 
 export const pastEvents = [
