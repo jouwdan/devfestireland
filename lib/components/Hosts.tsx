@@ -28,6 +28,10 @@ const Hosts: FC<HostsProps> = ({ data }) => {
           <Avatar size="2xl" name="Portlaoise" />
           <Text sx={styles.hostName}>GDG Portlaoise</Text>
         </Box>
+        <Box sx={styles.hostContainer}>
+          <Avatar size="2xl" name="Dublin" />
+          <Text sx={styles.hostName}>GDG Dublin</Text>
+        </Box>
       </SimpleGrid>
     </Container>
   );
