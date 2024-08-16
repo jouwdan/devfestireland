@@ -27,6 +27,69 @@ export const navLinks = [
   },
 ];
 
+export const chapters = [
+  {
+    name: "GDG Belfast",
+    city: "Belfast",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/gdg-belfast/posts/?feedView=all",
+      },
+    ],
+  },
+  {
+    name: "GDG Galway",
+    city: "Galway",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/gdg-galway/posts/?feedView=all",
+      },
+    ],
+  },
+  {
+    name: "GDG Athlone",
+    city: "Athlone",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/gdg-athlone-6a533525b",
+      },
+    ],
+  },
+  {
+    name: "GDG Portlaoise",
+    city: "Portlaoise",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/gdgportlaoise/posts/?feedView=all",
+      },
+    ],
+  },
+  {
+    name: "GDG Dublin",
+    city: "Dublin",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/gdgdublin/posts/?feedView=all"
+      },
+    ],
+  },
+  {
+    name: "GDSC UU",
+    city: "Ulster University",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/gdsc-uu/posts/?feedView=all",
+      },
+    ],
+  },
+]
+
 export const organizers = [
   {
     name: "Rachel Connor",

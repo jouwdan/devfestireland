@@ -1,7 +1,9 @@
 "use client";
 import { FC } from "react";
 
-import { Avatar, Box, Container, SimpleGrid, Text } from "@chakra-ui/react";
+import { chapters } from "@/lib/data";
+
+import { Avatar, Box, Container, SimpleGrid, Text, Link } from "@chakra-ui/react";
 
 interface HostsProps {
   data?: any;
@@ -11,27 +13,20 @@ const Hosts: FC<HostsProps> = ({ data }) => {
   return (
     <Container maxW="1920px" px="0" py="5vh">
       <Text sx={styles.heading}>Hosted by your local chapters</Text>
-      <SimpleGrid columns={{ base: 2, lg: 4 }} alignItems="center">
-        <Box sx={styles.hostContainer}>
-          <Avatar size="2xl" name="Belfast" />
-          <Text sx={styles.hostName}>GDG Belfast</Text>
-        </Box>
-        <Box sx={styles.hostContainer}>
-          <Avatar size="2xl" name="Galway" />
-          <Text sx={styles.hostName}>GDG Galway</Text>
-        </Box>
-        <Box sx={styles.hostContainer}>
-          <Avatar size="2xl" name="Athlone" />
-          <Text sx={styles.hostName}>GDG Athlone</Text>
-        </Box>
-        <Box sx={styles.hostContainer}>
-          <Avatar size="2xl" name="Portlaoise" />
-          <Text sx={styles.hostName}>GDG Portlaoise</Text>
-        </Box>
-        <Box sx={styles.hostContainer}>
-          <Avatar size="2xl" name="Dublin" />
-          <Text sx={styles.hostName}>GDG Dublin</Text>
-        </Box>
+      <SimpleGrid columns={{ base: 2, lg: 3 }} alignItems="center">
+        {chapters.map((chapter, chapterIndex) => (
+          <Box sx={styles.hostContainer} key={chapterIndex}>
+            <Avatar size="2xl" name={chapter.city} />
+            {chapter.social.map((social, socialIndex) => (
+              <Link
+                href={social.url}
+                target="_blank"
+                key={socialIndex}>
+                <Text sx={styles.hostName}>{chapter.name}</Text>
+              </Link>
+            ))}
+          </Box>
+        ))}
       </SimpleGrid>
     </Container>
   );
