@@ -21,6 +21,11 @@ const t1sponsors: Sponsor[] = [
     url: "https://developers.google.com/",
     logo: "/images/sponsors/google_developers.png",
   },
+  {
+    name: "DailyPay",
+    url: "https://https://www.dailypay.com/",
+    logo: "/images/sponsors/DailyPay.png",
+  },
 ];
 
 const t2sponsors: Sponsor[] = [];
