@@ -74,7 +74,7 @@ export const chapters = [
     social: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/company/gdgdublin/posts/?feedView=all"
+        url: "https://www.linkedin.com/company/gdgdublin/posts/?feedView=all",
       },
     ],
   },
@@ -87,7 +87,7 @@ export const chapters = [
         url: "https://www.linkedin.com/company/gdsc-uu/posts/?feedView=all",
       },
     ],
-  },  
+  },
   {
     name: "WTM Belfast",
     city: "Belfast",
@@ -98,7 +98,7 @@ export const chapters = [
       },
     ],
   },
-]
+];
 
 export const organizers = [
   {
@@ -276,3 +276,23 @@ export const pastEvents = [
     ],
   },
 ];
+
+export const sponsors = {
+  t1: [
+    {
+      name: "Google Developers",
+      url: "https://developers.google.com/",
+      logo: "/images/sponsors/google_developers.png",
+      description:
+        "As a proud sponsor of DevFest Ireland, Google Developers empowers a global community of developers, providing tools, resources, and inspiration for building innovative solutions.",
+    },
+    {
+      name: "DailyPay",
+      url: "https://www.dailypay.com/",
+      logo: "/images/sponsors/DailyPay.png",
+      description:
+        "DailyPay provides an industry-leading earned wage access platform that gives your employees access to their pay when they want it.",
+    },
+  ],
+  t2: [],
+};

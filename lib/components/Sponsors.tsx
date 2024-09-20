@@ -9,26 +9,7 @@ interface SponsorsProps {
   data?: any;
 }
 
-interface Sponsor {
-  name: string;
-  url: string;
-  logo: string;
-}
-
-const t1sponsors: Sponsor[] = [
-  {
-    name: "Google Developers",
-    url: "https://developers.google.com/",
-    logo: "/images/sponsors/google_developers.png",
-  },
-  {
-    name: "DailyPay",
-    url: "https://www.dailypay.com/",
-    logo: "/images/sponsors/DailyPay.png",
-  },
-];
-
-const t2sponsors: Sponsor[] = [];
+import { sponsors } from "@/lib/data";
 
 const Sponsors: FC<SponsorsProps> = ({ data }) => {
   return (
@@ -39,7 +20,7 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
         justifyContent="center"
         w={{ base: "100vw", lg: "50vw" }}
         mx="auto">
-        {t1sponsors.map((sponsor) => (
+        {sponsors.t1.map((sponsor) => (
           <Link href={sponsor.url} key={sponsor.name} target="_blank">
             <Card sx={styles.sponsorContainer} key={sponsor.name}>
               <CardBody>
@@ -54,8 +35,9 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
         justifyContent="center"
         w={{ base: "100vw", lg: "75vw" }}
         mx="auto">
-        {t2sponsors.length > 0 &&
-          t2sponsors.map((sponsor) => (
+        {sponsors.t2 &&
+          sponsors.t2.length > 0 &&
+          sponsors.t2.map((sponsor) => (
             <Link href={sponsor.url} key={sponsor.name} target="_blank">
               <Card sx={styles.sponsorContainer} key={sponsor.name}>
                 <CardBody>

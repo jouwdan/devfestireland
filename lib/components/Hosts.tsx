@@ -3,7 +3,14 @@ import { FC } from "react";
 
 import { chapters } from "@/lib/data";
 
-import { Avatar, Box, Container, SimpleGrid, Text, Link } from "@chakra-ui/react";
+import {
+  Avatar,
+  Box,
+  Container,
+  SimpleGrid,
+  Text,
+  Link,
+} from "@chakra-ui/react";
 
 interface HostsProps {
   data?: any;
@@ -18,10 +25,7 @@ const Hosts: FC<HostsProps> = ({ data }) => {
           <Box sx={styles.hostContainer} key={chapterIndex}>
             <Avatar size="2xl" name={chapter.city} />
             {chapter.social.map((social, socialIndex) => (
-              <Link
-                href={social.url}
-                target="_blank"
-                key={socialIndex}>
+              <Link href={social.url} target="_blank" key={socialIndex}>
                 <Text sx={styles.hostName}>{chapter.name}</Text>
               </Link>
             ))}
