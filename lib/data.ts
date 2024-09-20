@@ -87,6 +87,16 @@ export const chapters = [
         url: "https://www.linkedin.com/company/gdsc-uu/posts/?feedView=all",
       },
     ],
+  },  
+  {
+    name: "WTM Belfast",
+    city: "Belfast",
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/women-techmakers-belfast",
+      },
+    ],
   },
 ]
 
