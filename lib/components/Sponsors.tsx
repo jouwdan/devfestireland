@@ -9,6 +9,13 @@ interface SponsorsProps {
   data?: any;
 }
 
+interface Sponsor {
+  name: string;
+  url: string;
+  logo: string;
+  description?: string;
+}
+
 import { sponsors } from "@/lib/data";
 
 const Sponsors: FC<SponsorsProps> = ({ data }) => {
@@ -37,7 +44,7 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
         mx="auto">
         {sponsors.t2 &&
           sponsors.t2.length > 0 &&
-          sponsors.t2.map((sponsor) => (
+          sponsors.t2.map((sponsor: Sponsor) => (
             <Link href={sponsor.url} key={sponsor.name} target="_blank">
               <Card sx={styles.sponsorContainer} key={sponsor.name}>
                 <CardBody>
