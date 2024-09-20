@@ -39,13 +39,8 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
     <>
       <Box sx={styles.actionBar}>
         <Text textAlign="center" py="2">
-          Our Call for Speakers is now open.{" "}
-          <Link
-            href="https://sessionize.com/devfest-ireland-2024/"
-            target="_blank"
-            textDecoration="underline">
-            Click here to submit your talk!
-          </Link>
+          Our Call for Speakers is now closed. Agenda will be announced as soon
+          as possible.
         </Text>
       </Box>
       <Box sx={styles.navigationContainer}>
