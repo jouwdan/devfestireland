@@ -39,8 +39,13 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
     <>
       <Box sx={styles.actionBar}>
         <Text textAlign="center" py="2">
-          Our Call for Speakers is now closed. Agenda will be announced as soon
-          as possible.
+          Tickets are still available - register for your FREE ticket{" "}
+          <Link
+            href="https://gdg.community.dev/events/details/google-gdg-belfast-presents-devfest-ireland-2024/"
+            target="_blank"
+            textDecor="underline">
+            HERE!
+          </Link>
         </Text>
       </Box>
       <Box sx={styles.navigationContainer}>
