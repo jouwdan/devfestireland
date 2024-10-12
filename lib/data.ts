@@ -8,6 +8,10 @@ export const navLinks = [
     url: "/speakers",
   },
   {
+    name: "Agenda",
+    url: "/agenda",
+  },
+  {
     name: "Sponsors",
     url: "/sponsors",
   },
