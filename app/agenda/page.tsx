@@ -1,30 +1,35 @@
+// @ts-ignore
+
 "use client";
 
 import {
     Container,
     Text,
+    Box, Grid, GridItem, Heading, VStack
 } from "@chakra-ui/react";
-
-import dynamic from "next/dynamic";
 import Script from "next/script";
 
 
-export default dynamic(() => Promise.resolve(Agenda), { ssr: false });
-
 function Agenda() {
+
     return (
         <Container maxW="1920px" px="20px" py="5vh">
             <Text sx={styles.heading}>Agenda</Text>
 
+            <div className="sessionize-loader"
+                 data-sessionize-load-url="https://sessionize.com/api/v2/kbguy4wm/view/GridSmart?under=True">
+                <div className="sz-spinner"></div>
+            </div>
+
             <Script
-                type="text/javascript"
-                src="https://sessionize.com/api/v2/kbguy4wm/view/GridSmart"
                 strategy="afterInteractive"
-                onLoad={() => console.log("loaded from sessionize")}
-                onError={() => console.error("could not load from sessionize")}
+                src="https://sessionize.com/api/v2/kbguy4wm/view/GridSmart"
             />
+
         </Container>
     );
+
+
 }
 
 const styles = {
@@ -43,4 +48,6 @@ const styles = {
             border: "4px solid white",
         },
     },
-};
+}
+
+export default Agenda;
