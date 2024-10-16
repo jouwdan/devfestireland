@@ -108,7 +108,7 @@ export const organizers = [
   {
     name: "Rachel Connor",
     role: "Senior Consultant, Deloitte",
-    chapter: "GDG Belfast",
+    chapter: "GDG Belfast / Women Techmakers Belfast Lead",
     image: "/images/rachel-connor.png",
     social: [
       {
@@ -193,6 +193,24 @@ export const organizers = [
       },
     ],
   },
+  {
+    name: "Simon Hewitt",
+    role: "Software Engineer",
+    chapter: "GDG Belfast / Women Techmakers Belfast",
+    image: "/images/tyndyll.jpeg",
+    social: [
+
+    ],
+  },
+  {
+    name: "Yuan Zhang",
+    role: "Final Year CS Student",
+    chapter: "GDG Belfast / Women Techmakers Belfast",
+    image: "/images/yuan-zhang.JPG",
+    social: [
+
+    ],
+  }
 ];
 
 export const pastEvents = [
