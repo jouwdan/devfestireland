@@ -41,6 +41,9 @@ function Agenda() {
                   {room.sessions.map((session, index) => (
                     <Box key={index} sx={styles.sessionBox}>
                       <Text sx={styles.sessionTitle}>{session.title}</Text>
+                      {session.description && (
+                        <Text noOfLines={3}>{session.description}</Text>
+                      )}
                       <Text sx={styles.speakerName}>
                         {session.speakers
                           .map((speaker) => speaker.name)
@@ -138,6 +141,7 @@ const styles = {
     },
   },
   sessionTime: {
+    fontWeight: "bold",
     color: "grayscale.black",
     _dark: {
       color: "grayscale.white",
