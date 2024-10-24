@@ -26,7 +26,8 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
         flexDir={{ base: "column", lg: "row" }}
         justifyContent="center"
         w={{ base: "100vw", lg: "50vw" }}
-        mx="auto">
+        mx="auto"
+      >
         {sponsors.t1.map((sponsor) => (
           <Link href={sponsor.url} key={sponsor.name} target="_blank">
             <Card sx={styles.sponsorContainer} key={sponsor.name}>
@@ -40,19 +41,18 @@ const Sponsors: FC<SponsorsProps> = ({ data }) => {
       <Flex
         flexDir={{ base: "column", lg: "row" }}
         justifyContent="center"
-        w={{ base: "100vw", lg: "75vw" }}
-        mx="auto">
-        {sponsors.t2 &&
-          sponsors.t2.length > 0 &&
-          sponsors.t2.map((sponsor: Sponsor) => (
-            <Link href={sponsor.url} key={sponsor.name} target="_blank">
-              <Card sx={styles.sponsorContainer} key={sponsor.name}>
-                <CardBody>
-                  <Image alt={sponsor.name} src={sponsor.logo} />
-                </CardBody>
-              </Card>
-            </Link>
-          ))}
+        w={{ base: "100vw", lg: "50vw" }}
+        mx="auto"
+      >
+        {sponsors.t2.map((sponsor: Sponsor) => (
+          <Link href={sponsor.url} key={sponsor.name} target="_blank">
+            <Card sx={styles.sponsorContainer} key={sponsor.name}>
+              <CardBody>
+                <Image alt={sponsor.name} src={sponsor.logo} maxWidth="250px" />
+              </CardBody>
+            </Card>
+          </Link>
+        ))}
       </Flex>
     </Container>
   );

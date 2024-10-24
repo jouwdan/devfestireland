@@ -9,6 +9,8 @@ import {
   Grid,
   GridItem,
   Heading,
+  Button,
+  Show,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Schedule } from "@/types/schedule";
@@ -23,6 +25,29 @@ function Agenda() {
       .catch((err) => console.error(err));
   }, []);
 
+  const DescriptionWithButton = ({ description }: { description: string }) => {
+    const [showMore, setShowMore] = useState(false);
+    const showDescription = () => {
+      setShowMore(!showMore);
+    };
+
+    return (
+      <Show above="lg">
+        <Text noOfLines={showMore ? undefined : 3}>{description}</Text>
+        <Button
+          w="full"
+          variant="unstyled"
+          sx={styles.button}
+          size="md"
+          mb="8px"
+          onClick={showDescription}
+        >
+          {showMore ? "Show Less" : "Show More"}
+        </Button>
+      </Show>
+    );
+  };
+
   return (
     <Container maxW="1920px" px="20px" py="5vh">
       <Text sx={styles.heading}>Agenda</Text>
@@ -34,7 +59,8 @@ function Agenda() {
                 <GridItem
                   key={index}
                   sx={styles.roomBox}
-                  colSpan={{ base: 2, lg: 1 }}>
+                  colSpan={{ base: 2, lg: 1 }}
+                >
                   <Heading size="md" sx={styles.roomHeading}>
                     {room.name}
                   </Heading>
@@ -42,7 +68,9 @@ function Agenda() {
                     <Box key={index} sx={styles.sessionBox}>
                       <Text sx={styles.sessionTitle}>{session.title}</Text>
                       {session.description && (
-                        <Text noOfLines={3}>{session.description}</Text>
+                        <DescriptionWithButton
+                          description={session.description}
+                        />
                       )}
                       <Text sx={styles.speakerName}>
                         {session.speakers
@@ -90,6 +118,28 @@ const styles = {
       background: "blue.core",
       color: "white",
       border: "4px solid white",
+    },
+  },
+  button: {
+    borderRadius: "9999px",
+    px: "12px",
+    py: "4px",
+    bg: "transparent",
+    transition: "background-color 0.2s",
+    _hover: {
+      bg: "blue.pastel",
+    },
+    _active: {
+      bg: "blue.pastel",
+    },
+    _dark: {
+      _hover: {
+        bg: "blue.core",
+        color: "white",
+      },
+      _active: {
+        bg: "blue.core",
+      },
     },
   },
   dayHeading: {
