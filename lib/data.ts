@@ -198,19 +198,22 @@ export const organizers = [
     role: "Software Engineer",
     chapter: "GDG Belfast / Women Techmakers Belfast",
     image: "/images/tyndyll.jpeg",
-    social: [
-
-    ],
+    social: [],
   },
   {
     name: "Yuan Zhang",
     role: "Final Year CS Student",
     chapter: "GDG Belfast / Women Techmakers Belfast",
     image: "/images/yuan-zhang.JPG",
-    social: [
-
-    ],
-  }
+    social: [],
+  },
+  {
+    name: "Suhani Chawla",
+    role: "Software Engineer",
+    chapter: "GDG Dublin",
+    image: "/images/suhani-chawla.png",
+    social: [{ name: "LinkedIn", url: "https://www.linkedin.com/in/suhani-chawla-891919171" }],
+  },
 ];
 
 export const pastEvents = [
@@ -302,21 +305,36 @@ export const pastEvents = [
 export const sponsors = {
   t1: [
     {
-      name: "Google Developers",
-      url: "https://developers.google.com/",
-      logo: "/images/sponsors/google_developers.png",
-      description:
-        "As a proud sponsor of DevFest Ireland, Google Developers empowers a global community of developers, providing tools, resources, and inspiration for building innovative solutions.",
-    },
-    {
       name: "DailyPay",
       url: "https://www.dailypay.com/",
       logo: "/images/sponsors/DailyPay.png",
       description:
         "DailyPay provides an industry-leading earned wage access platform that gives your employees access to their pay when they want it.",
     },
+    {
+      name: "Google Developers",
+      url: "https://developers.google.com/",
+      logo: "/images/sponsors/google_developers.png",
+      description:
+        "As a proud sponsor of DevFest Ireland, Google Developers empowers a global community of developers, providing tools, resources, and inspiration for building innovative solutions.",
+    },
   ],
-  t2: [],
+  t2: [
+    {
+      name: "Liberty IT",
+      url: "https://www.liberty-it.ie/about-us/overview",
+      logo: "/images/sponsors/liberty_it.png",
+      description:
+        "Liberty IT is part of Liberty Mutual Insurance. We’re the cogs behind the #78 Fortune-ranked company, the key drivers behind their global digital enablement journey, reimagining insurance by delivering an ever more efficient service for our customers.",
+    },
+    {
+      name: "Ulster University, Faculty of Computing, Engineering and the Built Environment",
+      url: "https://www.ulster.ac.uk/faculties/computing-engineering-and-the-built-environment/about",
+      logo: "/images/sponsors/ulster_university.png",
+      description:
+        "The Faculty of Computing, Engineering and the Built Environment consists of four Schools, offering industry-informed, professionally recognised courses at both undergraduate and postgraduate level.",
+    },
+  ],
 };
 
 export const speakers = [
