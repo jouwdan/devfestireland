@@ -440,7 +440,7 @@ export const speakers = [
     FirstName: "Tanya",
     LastName: "Vacarda",
     image: "/images/speakers/tanya-vacarda.jpg",
-    TagLine: "Allstate NI, Sr. Consultant",
+    TagLine: "Ekco Cybersecurity Ops Services",
     Title:
       "When Social Hacking Meets Technology: The Social Engineering Tactics Behind AI Deepfake Attacks",
     SessionType: "Full Talk",
