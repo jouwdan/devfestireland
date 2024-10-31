@@ -212,7 +212,12 @@ export const organizers = [
     role: "Software Engineer",
     chapter: "GDG Dublin",
     image: "/images/suhani-chawla.png",
-    social: [{ name: "LinkedIn", url: "https://www.linkedin.com/in/suhani-chawla-891919171" }],
+    social: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/suhani-chawla-891919171",
+      },
+    ],
   },
 ];
 
@@ -333,6 +338,13 @@ export const sponsors = {
       logo: "/images/sponsors/ulster_university.png",
       description:
         "The Faculty of Computing, Engineering and the Built Environment consists of four Schools, offering industry-informed, professionally recognised courses at both undergraduate and postgraduate level.",
+    },
+    {
+      name: "FRS Recruitment",
+      url: "https://www.frsrecruitment.com/employers/it-recruitment",
+      logo: "/images/sponsors/frs_recruitment.png",
+      description:
+        "FRS Recruitment are Ireland's national recruitment specialists based nationwide and specialising in IT, Healthcare, Engineering & Temporary employment.",
     },
   ],
 };
