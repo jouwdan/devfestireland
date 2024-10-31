@@ -346,6 +346,14 @@ export const sponsors = {
       description:
         "FRS Recruitment are Ireland's national recruitment specialists based nationwide and specialising in IT, Healthcare, Engineering & Temporary employment.",
     },
+    {
+      name: "Couchbase",
+      url: "https://www.couchbase.com/`",
+      logo: "/images/sponsors/couchbase.png",
+      description:
+        "Couchbase is an award-winning distributed NoSQL cloud database that delivers unmatched versatility, performance, scalability, and financial value for all of your cloud, mobile, analytic, AI, and edge computing applications. Couchbase embraces AI with coding assistance for developers, real-time analytics, and cloud to edge vector search for their applications.",
+    },
+
   ],
 };
 
