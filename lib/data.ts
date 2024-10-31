@@ -373,6 +373,17 @@ export const speakers = [
     Instagram: "",
   },
   {
+    FirstName: "Stephen",
+    LastName: "Darling",
+    image: "/images/speakers/stephen-darling.jpg",
+    TagLine: "Staff Software Engineer at DailyPay",
+    Title: "Terraform Wins and Woes: A Real Look at Infrastructure-as-Code",
+    SessionType: "Full Talk",
+    X: "",
+    LinkedIn: "01darling/",
+    Instagram: "",
+  },
+  {
     FirstName: "Daniel",
     LastName: "Murphy",
     image: "/images/speakers/daniel-murphy.jpeg",
