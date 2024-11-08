@@ -515,4 +515,16 @@ export const speakers = [
     LinkedIn: "tanyavacarda/",
     Instagram: "",
   },
+  {
+    FirstName: "Ali",
+    LastName: "Satter",
+    image: "/images/speakers/ali-satter.png",
+    TagLine: "Product Manager at Google",
+    Title:
+      "Supercharge your development workflow with Project IDX",
+    SessionType: "Full Talk",
+    X: "",
+    LinkedIn: "tsatter/",
+    Instagram: "",
+  },
 ];
