@@ -22,7 +22,7 @@ const googleSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DevFest Ireland 2024",
+  title: "DevFest Ireland 2025",
   description:
     "Ireland’s largest community-driven tech event, cohosted by all GDGs across the country. Dive into a day full of inspiring talks, hands-on workshops, and networking with fellow tech enthusiasts.",
   keywords:

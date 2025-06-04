@@ -37,7 +37,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
   const pathname = usePathname();
   return (
     <>
-      <Box sx={styles.actionBar}>
+      {/* <Box sx={styles.actionBar}>
         <Text textAlign="center" py="2">
           Tickets are still available - register for your FREE ticket{" "}
           <Link
@@ -47,7 +47,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
             HERE!
           </Link>
         </Text>
-      </Box>
+      </Box> */}
       <Box sx={styles.navigationContainer}>
         <Container maxW="1920px">
           <Box sx={styles.navigation}>
@@ -64,7 +64,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
               </Box>
             </Link>
             <Flex>
-              <Show above="lg">
+              {/* <Show above="lg">
                 {navLinks.map((link) => (
                   <Link
                     href={link.url}
@@ -80,7 +80,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
                     </Button>
                   </Link>
                 ))}
-              </Show>
+              </Show> */}
               <Button
                 variant="unstyled"
                 sx={styles.button}
@@ -89,7 +89,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
                 ml="4">
                 <MoonIcon />
               </Button>
-              <Show below="lg">
+              {/* <Show below="lg">
                 <Button
                   ref={btnRef}
                   onClick={onOpen}
@@ -134,7 +134,7 @@ const Navigation: FC<NavigationProps> = ({ data }) => {
                     </DrawerBody>
                   </DrawerContent>
                 </Drawer>
-              </Show>
+              </Show> */}
             </Flex>
           </Box>
         </Container>
