@@ -28,7 +28,7 @@ const ComingSoon: FC = () => {
             <Text sx={styles.devfestText}>DevFest Ireland</Text>
             <Icon as={CurlyBracketClose} sx={styles.curlyBracket} />
           </Flex>
-          <Flex align="center" gap={2} my={8}>
+          <Flex direction={{base: 'column', lg: 'row'}} align="center" gap={2} my={8}>
             <Text sx={styles.dateText}>6th December 2025</Text>
             <Icon as={Comment} sx={styles.comment} />
             <Text sx={styles.locationText}>
@@ -123,6 +123,10 @@ const styles = {
       bg: "blue.700",
       transform: "scale(0.95)",
     },
+    _dark: {
+      color: '#1a1a1a',
+      borderColor: 'white'
+    }
   },
 };
 
